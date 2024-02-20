@@ -1,0 +1,276 @@
+{
+  "uuid": "251d9a07-2fb5-4843-bfc3-6b17baca8512",
+  "lastMigration": 32,
+  "name": "Conectarte",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3000,
+  "hostname": "",
+  "folders": [
+    {
+      "uuid": "75016008-dc05-4fce-8abf-831e4cfa4070",
+      "name": "Products",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "f373311c-51a7-40ab-94aa-184100897e7d"
+        },
+        {
+          "type": "route",
+          "uuid": "c6cd7b85-2d53-41ba-87bd-42f507b6b9c9"
+        },
+        {
+          "type": "route",
+          "uuid": "4d2d3347-5f83-453e-b631-2be9373a2bb7"
+        },
+        {
+          "type": "route",
+          "uuid": "d6226518-b286-400d-b72b-2dce0046b44d"
+        }
+      ]
+    },
+    {
+      "uuid": "e277631b-1f28-4f67-b0ae-b924d6e72940",
+      "name": "Seller",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "831ac39a-577e-4348-8938-a5db609b5e54"
+        }
+      ]
+    },
+    {
+      "uuid": "b59355af-de69-4789-b0ed-a2ba76ea5903",
+      "name": "Category",
+      "children": []
+    }
+  ],
+  "routes": [
+    {
+      "uuid": "f373311c-51a7-40ab-94aa-184100897e7d",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "products",
+      "responses": [
+        {
+          "uuid": "d264c84e-07bf-441a-afa7-ac8ca911001b",
+          "body": "[\n  {{#repeat 6}}\n  {\n    \"id\": {{ faker 'string.uuid' }},\n    \"nome\": {{ faker 'commerce.productName' }},\n    \"artista_id\": {{ faker 'string.uuid' }},\n    \"descrição\": {{ faker 'commerce.productDescription' }},\n    \"preço\":  {{ faker 'commerce.price' }},\n    \"img\": \"https: //cdn.pixabay.com/photo/2023/09/23/04/15/ai-generated-8270217_1280.jpg\"\n  }\n  {{/repeat}}\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "iamd",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "4d2d3347-5f83-453e-b631-2be9373a2bb7",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "products/category/:id",
+      "responses": [
+        {
+          "uuid": "b515275e-9f5c-4448-9ec2-4306e6155fd9",
+          "body": "[\n  {{#repeat 10}}\n  {\n    \"id\": {{ faker 'string.uuid' }},\n    \"nome\": {{ faker 'commerce.productName' }},\n    \"artista_id\": {{ faker 'string.uuid' }},\n    \"descrição\": {{ faker 'commerce.productDescription' }},\n    \"preço\":  {{ faker 'commerce.price' }},\n    \"img\": \"https: //cdn.pixabay.com/photo/2023/09/23/04/15/ai-generated-8270217_1280.jpg\"\n  }\n  {{/repeat}}\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "iamd",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "d6226518-b286-400d-b72b-2dce0046b44d",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "products/seller/:id",
+      "responses": [
+        {
+          "uuid": "02c256f4-b142-405a-9a8a-a1a98f5c7fc3",
+          "body": "[\n  {{#repeat 10}}\n  {\n    \"id\": {{ faker 'string.uuid' }},\n    \"nome\": {{ faker 'commerce.productName' }},\n    \"artista_id\": {{ faker 'string.uuid' }},\n    \"descrição\": {{ faker 'commerce.productDescription' }},\n    \"preço\":  {{ faker 'commerce.price' }},\n    \"img\": \"https: //cdn.pixabay.com/photo/2023/09/23/04/15/ai-generated-8270217_1280.jpg\"\n  }\n  {{/repeat}}\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "iamd",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "c6cd7b85-2d53-41ba-87bd-42f507b6b9c9",
+      "type": "http",
+      "documentation": "Utilizado na página de detalhes do produto",
+      "method": "get",
+      "endpoint": "product/:id",
+      "responses": [
+        {
+          "uuid": "7956e0ad-478b-458f-93b0-37d1bf7514d1",
+          "body": "{\n  \"id\": {{ faker 'string.uuid' }},\n  \"nome\": {{ faker 'commerce.productName' }},\n  \"artista_id\": {{ faker 'string.uuid' }},\n  \"descrição\": {{ faker 'commerce.productDescription' }},\n  \"preço\":  {{ faker 'commerce.price' }},\n  \"img\": \"https: //cdn.pixabay.com/photo/2023/09/23/04/15/ai-generated-8270217_1280.jpg\",\n  \"phone_number\": {{ faker 'phone.number' }},\n  \"latitude\": {{faker 'location.latitude'}},\n  \"longitude\": {{faker 'location.longitude'}}\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "0pgy",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "831ac39a-577e-4348-8938-a5db609b5e54",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "seller/:id",
+      "responses": [
+        {
+          "uuid": "7881be49-1630-4868-bf7c-bd441e70e8ae",
+          "body": "{\n  \"id\": {{ faker 'string.uuid' }},\n  \"name\": {{ faker 'internet.displayName' }},\n  \"description\": {{ faker 'lorem.paragraph' }},\n  \"img\": {{ faker 'internet.avatar' }},\n  \"phone_number\": {{ faker 'phone.number' }},\n  \"latitude\": {{faker 'location.latitude'}},\n  \"longitude\": {{faker 'location.longitude'}}\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "27fh",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "folder",
+      "uuid": "75016008-dc05-4fce-8abf-831e4cfa4070"
+    },
+    {
+      "type": "folder",
+      "uuid": "e277631b-1f28-4f67-b0ae-b924d6e72940"
+    },
+    {
+      "type": "folder",
+      "uuid": "b59355af-de69-4789-b0ed-a2ba76ea5903"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "uuid": "ffd40046-0a06-4e61-a9ac-7b70dfdd056f",
+      "id": "iamd",
+      "name": "Product list",
+      "documentation": "",
+      "value": "[\n  {{#repeat 6}}\n  {\n    \"id\": \"{{ faker 'string.uuid' }}\",\n    \"name\": \"{{ faker 'commerce.productName' }}\",\n    \"description\": \"{{ faker 'commerce.productDescription' }}\",\n    \"price\":  {{ faker 'commerce.price' }},\n    \"image_url\": \"https://cdn.pixabay.com/photo/2023/09/23/04/15/ai-generated-8270217_1280.jpg\",\n    \"updatedAt\": \"{{ now }}\",\n    \"createdAt\": \"{{ now }}\",\n    \"seller\": {\n      \"id\": \"{{ faker 'string.uuid' }}\",\n      \"name\": \"{{ faker 'internet.displayName' }}\",\n      \"description\": \"{{ faker 'lorem.paragraph' }}\",\n      \"image_url\": \"{{ faker 'internet.avatar' }}\",\n      \"phone_number\": \"{{ faker 'phone.number' }}\",\n      \"latitude\": \"{{faker 'location.latitude'}}\",\n      \"longitude\": \"{{faker 'location.longitude'}}\",\n      \"url\": \"{{ faker 'internet.url' }}\",\n      \"updatedAt\": \"{{ now }}\",\n      \"createdAt\": \"{{ now }}\"\n    }\n  }\n  {{/repeat}}\n]"
+    },
+    {
+      "uuid": "7300b3d9-9a12-421f-a652-6d5678403434",
+      "id": "0pgy",
+      "name": "Product data",
+      "documentation": "Detalhes de um produto",
+      "value": "{\n  \"id\": \"{{ faker 'string.uuid' }}\",\n  \"name\": \"{{ faker 'commerce.productName' }}\",\n  \"description\": \"{{ faker 'commerce.productDescription' }}\",\n  \"price\":  {{ faker 'commerce.price' }},\n  \"image_url\": \"https://cdn.pixabay.com/photo/2023/09/23/04/15/ai-generated-8270217_1280.jpg\",\n  \"updatedAt\": \"{{ now }}\",\n  \"createdAt\": \"{{ now }}\",\n  \"seller\": {\n    \"id\": \"{{ faker 'string.uuid' }}\",\n    \"name\": \"{{ faker 'internet.displayName' }}\",\n    \"description\": \"{{ faker 'lorem.paragraph' }}\",\n    \"image_url\": \"{{ faker 'internet.avatar' }}\",\n    \"phone_number\": \"{{ faker 'phone.number' }}\",\n    \"latitude\": \"{{faker 'location.latitude'}}\",\n    \"longitude\": \"{{faker 'location.longitude'}}\",\n    \"url\": \"{{ faker 'internet.url' }}\",\n    \"updatedAt\": \"{{ now }}\",\n    \"createdAt\": \"{{ now }}\"\n  }\n}"
+    },
+    {
+      "uuid": "e78eed69-0528-409e-aa3a-1a556724e533",
+      "id": "27fh",
+      "name": "Seller",
+      "documentation": "Dados de um vendedor",
+      "value": "{\n  \"id\": \"{{ faker 'string.uuid' }}\",\n  \"name\": \"{{ faker 'internet.displayName' }}\",\n  \"description\": \"{{ faker 'lorem.paragraph' }}\",\n  \"image_url\": \"{{ faker 'internet.avatar' }}\",\n  \"phone_number\": \"{{ faker 'phone.number' }}\",\n  \"latitude\": \"{{faker 'location.latitude'}}\",\n  \"longitude\": \"{{faker 'location.longitude'}}\",\n  \"url\": \"{{ faker 'internet.url' }}\",\n  \"updatedAt\": \"{{ now }}\",\n  \"createdAt\": \"{{ now }}\"\n}"
+    }
+  ],
+  "callbacks": []
+}

@@ -1,0 +1,27 @@
+.card {
+  display: block;
+
+  .card-body {
+    .card-title {
+      font-size: 1.6rem;
+    }
+
+    .price {
+      font-size: 1.4rem;
+    }
+  }
+
+  .card-footer {
+    font-size: 1rem;
+
+    .seller {
+      cursor: pointer;
+      color: #000;
+      font-weight: 700;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

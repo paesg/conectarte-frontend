@@ -1,0 +1,30 @@
+<div class="card h-100" [routerLink]="['/product', product.id]">
+  <img [src]="product.image_url" class="card-img-top" [alt]="product.name" />
+
+  <div class="card-body">
+    <h1 class="card-title">{{ product.name }}</h1>
+
+    <h2 class="price">
+      {{ product.price | currency : "BRL" }}
+    </h2>
+
+    <p class="card-text">
+      {{ product.description }}
+    </p>
+  </div>
+
+  <div class="card-footer">
+    <div>
+      Vendido por
+      <span class="seller" [routerLink]="['/seller', product.seller.id]">{{
+        product.seller.name
+      }}</span>
+    </div>
+
+    <hr />
+
+    <small class="text-body-secondary">
+      Criado em {{ product.createdAt | date : "shortDate" }}
+    </small>
+  </div>
+</div>

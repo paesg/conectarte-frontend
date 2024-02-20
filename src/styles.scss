@@ -5,7 +5,7 @@
 
 :root {
   --cor-primaria: #685038;
-  --cor-secundaria: rgba(195, 134, 49, 0.694);
+  --cor-secundaria: #d1a667;
   --background: #f2efe2;
 }
 
@@ -14,4 +14,5 @@ body {
   padding: 0;
   font-family: "Kanit", "Roboto";
   background: var(--background);
+  overflow-y: scroll;
 }
