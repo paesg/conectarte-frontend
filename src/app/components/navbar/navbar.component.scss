@@ -1,0 +1,67 @@
+$header-height: 80px;
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 98;
+
+  &.navbar {
+    background: var(--cor-secundaria);
+    height: $header-height;
+    margin-bottom: 3.25rem;
+
+    svg {
+      height: 60px;
+    }
+
+    .navbar-brand {
+      cursor: pointer;
+    }
+
+    .nav-link {
+      font-size: 1rem;
+      color: var(--cor-primaria);
+      margin: 0 1rem;
+
+      &:hover {
+        color: #000;
+      }
+
+      &.active {
+        border-bottom: 2px solid var(--cor-primaria);
+      }
+    }
+
+    .navbar-collapse {
+      // When navbar is in mobile mode
+      &.show {
+        position: fixed;
+        top: calc($header-height);
+        left: 0;
+        background-color: #fff;
+        z-index: 99;
+        width: 100%;
+        height: calc(100vh - $header-height);
+        padding: 1rem;
+        overflow-y: auto;
+
+        .nav-item {
+          margin: 0.5rem 0;
+          border-bottom: 1px solid #ececec;
+        }
+      }
+    }
+  }
+
+  #icons-right {
+    font-size: 1.25rem;
+
+    .item {
+      cursor: pointer;
+
+      i:hover {
+        color: var(--cor-primaria)
+      }
+    }
+  }
+}

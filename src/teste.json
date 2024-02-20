@@ -1,0 +1,90 @@
+{
+  "editor.tabSize": 2,
+  "security.workspace.trust.untrustedFiles": "newWindow",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "editor.fontLigatures": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.rulers": [80, 120],
+  "editor.wordWrap": "on",
+  "semi": false,
+  "git.autofetch": true,
+  "workbench.iconTheme": "icons",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "security.workspace.trust.banner": "never",
+  "security.workspace.trust.emptyWindow": false,
+  "editor.fontFamily": "JetBrains Mono",
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.startupEditor": "none",
+  "explorer.compactFolders": false,
+  "window.zoomLevel": 1,
+  "tabnine.experimentalAutoImports": true,
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "code-runner.runInTerminal": true,
+  "workbench.colorTheme": "Tokyo Night",
+  "security.allowedUNCHosts": ["wsl.localhost"],
+
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+
+  // Prettier
+  "prettier.singleQuote": true,
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "prettier.trailingComma": "none", // what strategy you want to use to update your package.json
+  "prettier.endOfLine": "auto",
+  "prettier.printWidth": 85,
+  "prettier.semi": false,
+  "prettier.resolveGlobalModules": true,
+  "prettier.withNodeModules": true,
+
+  // eslint
+  "eslint.alwaysShowStatus": true,
+  "eslint.packageManager": "npm",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "javascript"
+  ],
+  "eslint.codeActionsOnSave.mode": "problems",
+  "eslint.onIgnoredFiles": "off",
+  "eslint.ignoreUntitled": true,
+  "eslint.options": {
+    "extensions": [".js", ".jsx", ".ts", ".tsx"]
+  },
+
+
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript][typescriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "nxConsole.showNodeVersionOnStartup": false,
+
+  "editor.formatOnPaste": true,
+  // "editor.formatOnSave": true,
+
+  "symbols.hidesExplorerArrows": false
+}

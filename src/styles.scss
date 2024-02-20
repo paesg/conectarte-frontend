@@ -1,0 +1,17 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --cor-primaria: #685038;
+  --cor-secundaria: rgba(195, 134, 49, 0.694);
+  --background: #f2efe2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Kanit", "Roboto";
+  background: var(--background);
+}
