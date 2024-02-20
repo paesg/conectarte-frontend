@@ -1,0 +1,140 @@
+#main-section {
+    background-color: #F2EFE2;
+}
+
+.headline {
+    width: 1060px;
+    border-radius: 10px;
+    align-items: center;
+    margin: auto auto 30px auto;
+    padding: 20px 10px 20px 10px;
+    background-color: #685038;
+    opacity: 100;
+}
+
+.tittle {
+    color: rgba(252, 252, 252);
+    font-size: 46px;
+    margin: 25px auto auto auto;
+    padding: 20px auto auto auto;
+    font-family: 'Kanit', 'sans-serif';
+    font-weight: 500;
+    text-align: center;
+}
+
+.text-headline {
+    color: rgba(252, 252, 252);
+    font-size: 27px;
+    margin: 20px;
+    padding: 10px 100px 15px 100px;
+    font-family: 'Kanit', 'sans-serif';
+    font-weight: 400;
+    text-align: center;
+}
+
+.board {
+    width: 100%;
+    display: flex;
+    background-color: #D9D9D9;
+    padding: 20px 0;
+    margin: 0;
+    border: 0;
+    box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.2),
+        inset 0 -5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    width: 330px;
+    align-items: center;
+    margin: 20px auto;
+    padding: 30px 20px 30px 20px;
+    background-color: #685038;
+    opacity: 100;
+}
+
+.tittle-cards {
+    color: rgba(252, 252, 252);
+    font-size: 32px;
+    margin: 20px auto 30px auto;
+    padding: 30px auto auto auto;
+    font-family: 'Kanit', 'sans-serif';
+    font-weight: 400;
+    text-align: center;
+}
+
+.text-cards {
+    color: rgba(252, 252, 252);
+    font-size: 20px;
+    margin: auto auto 20px auto;
+    padding: auto 10px 40px 10px;
+    font-family: 'Kanit', 'sans-serif';
+    font-weight: 400;
+    text-align: center;
+}
+
+.tittle-reviews {
+    color: rgba(0, 0, 0);
+    font-size: 46px;
+    margin: 50px auto 50px auto;
+    padding: auto;
+    font-family: 'Kanit', 'sans-serif';
+    font-weight: bold;
+    text-align: center;
+}
+
+.identification-left {
+    color: rgba(0, 0, 0);
+    font-size: 18px;
+    font-family: 'Kanit',
+        'sans-serif';
+    text-align: left;
+    text-decoration: underline;
+    width: 100%;
+    align-items: left;
+    margin: 20px 20px 0 20px;
+}
+
+.review-left {
+    width: 100%;
+    display: flex;
+    align-items: left;
+    margin: 0 20px 50px 20px;
+}
+
+.text-review-left {
+    color: rgba(0, 0, 0);
+    font-size: 20px;
+    margin: auto 350px auto auto;
+    padding: 0 20px;
+    font-family: 'Kanit', 'sans-serif';
+    font-weight: 500;
+}
+
+.identification-right {
+    color: rgba(0, 0, 0);
+    font-size: 18px;
+    font-family: 'Kanit',
+        'sans-serif';
+    text-align: right;
+    text-decoration: underline;
+    width: 100%;
+    align-items: right;
+    margin: 20px 0 0 -20px;
+}
+
+.review-right {
+    width: 100%;
+    display: flex;
+    align-items: right;
+    margin: 0 0 50px -20px;
+}
+
+.text-review-right {
+    color: rgba(0, 0, 0);
+    font-size: 20px;
+    margin: auto auto auto 350px;
+    padding: 0 20px;
+    font-family: 'Kanit', 'sans-serif';
+    font-weight: 500;
+    text-align: right;
+}
