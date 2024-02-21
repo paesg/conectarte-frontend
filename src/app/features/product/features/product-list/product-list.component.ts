@@ -1,9 +1,9 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ProductItemComponent } from '../../components/product-item/product-item.component';
-import { ProductService } from '../../services/product.service';
-import { Product } from '../../models/product.model';
-import { Subject, takeUntil, tap } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subject, takeUntil } from 'rxjs';
+import { ProductItemComponent } from '../../components/product-item/product-item.component';
+import { Product } from '../../models/product.model';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-product-list',

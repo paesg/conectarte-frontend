@@ -42,7 +42,16 @@
     {
       "uuid": "b59355af-de69-4789-b0ed-a2ba76ea5903",
       "name": "Category",
-      "children": []
+      "children": [
+        {
+          "type": "route",
+          "uuid": "2229a3d7-e075-4f1f-bf6f-33ed07a3e7af"
+        },
+        {
+          "type": "route",
+          "uuid": "eb2489ca-5aa6-41ff-8c4c-e8cf39bfad65"
+        }
+      ]
     }
   ],
   "routes": [
@@ -89,7 +98,7 @@
           "statusCode": 200,
           "label": "",
           "headers": [],
-          "bodyType": "DATABUCKET",
+          "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "iamd",
           "sendFileAsBody": false,
@@ -118,7 +127,7 @@
           "statusCode": 200,
           "label": "",
           "headers": [],
-          "bodyType": "DATABUCKET",
+          "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "iamd",
           "sendFileAsBody": false,
@@ -147,7 +156,7 @@
           "statusCode": 200,
           "label": "",
           "headers": [],
-          "bodyType": "DATABUCKET",
+          "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "0pgy",
           "sendFileAsBody": false,
@@ -176,9 +185,67 @@
           "statusCode": 200,
           "label": "",
           "headers": [],
-          "bodyType": "DATABUCKET",
+          "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "27fh",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "2229a3d7-e075-4f1f-bf6f-33ed07a3e7af",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "categories",
+      "responses": [
+        {
+          "uuid": "58c052d5-530f-4937-ac6d-7d737d7d4abb",
+          "body": "[\n  {{#repeat 6}}\n  {\n  \"id\": {{ faker 'string.uuid' }},\n  \"name\": {{ faker 'company.bsBuzz' }},\n  \"description\": {{ faker 'lorem.paragraph' }}\n  }\n  {{/repeat}}\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "olbh",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "eb2489ca-5aa6-41ff-8c4c-e8cf39bfad65",
+      "type": "http",
+      "documentation": "Detalhes de uma categoria",
+      "method": "get",
+      "endpoint": "category/:id",
+      "responses": [
+        {
+          "uuid": "f0ccfd6d-8ad3-4d90-996f-9e2ad6232b0b",
+          "body": "{\n  \"id\": {{ faker 'string.uuid' }},\n  \"name\": {{ faker 'company.bsBuzz' }},\n  \"description\": {{ faker 'lorem.paragraph' }}\n}\n",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "iduv",
           "sendFileAsBody": false,
           "rules": [],
           "rulesOperator": "OR",
@@ -270,6 +337,20 @@
       "name": "Seller",
       "documentation": "Dados de um vendedor",
       "value": "{\n  \"id\": \"{{ faker 'string.uuid' }}\",\n  \"name\": \"{{ faker 'internet.displayName' }}\",\n  \"description\": \"{{ faker 'lorem.paragraph' }}\",\n  \"image_url\": \"{{ faker 'internet.avatar' }}\",\n  \"phone_number\": \"{{ faker 'phone.number' }}\",\n  \"latitude\": \"{{faker 'location.latitude'}}\",\n  \"longitude\": \"{{faker 'location.longitude'}}\",\n  \"url\": \"{{ faker 'internet.url' }}\",\n  \"updatedAt\": \"{{ now }}\",\n  \"createdAt\": \"{{ now }}\"\n}"
+    },
+    {
+      "uuid": "89caf940-bb53-43e3-9d20-cc3384b98d27",
+      "id": "olbh",
+      "name": "Category list",
+      "documentation": "",
+      "value": "[\n  {{#repeat 6}}\n  {\n  \"id\": {{ faker 'string.uuid' }},\n  \"name\": {{ faker 'company.bsBuzz' }},\n  \"description\": {{ faker 'lorem.paragraph' }}\n  }\n  {{/repeat}}\n]"
+    },
+    {
+      "uuid": "b2658f2a-d6f2-48f2-9010-d3c9a6e09f0d",
+      "id": "iduv",
+      "name": "Category data",
+      "documentation": "",
+      "value": "{\n  \"id\": {{ faker 'string.uuid' }},\n  \"name\": {{ faker 'company.bsBuzz' }},\n  \"description\": {{ faker 'lorem.paragraph' }}\n}\n"
     }
   ],
   "callbacks": []
