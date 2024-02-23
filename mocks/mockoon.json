@@ -275,12 +275,12 @@
       "responses": [
         {
           "uuid": "7881be49-1630-4868-bf7c-bd441e70e8ae",
-          "body": "{\n  \"id\": \"{{ faker 'string.uuid' }}\",\n  \"name\": \"{{ faker 'internet.displayName' }}\",\n  \"description\": \"{{ faker 'lorem.paragraph' }}\",\n  \"image_url\": \"{{ faker 'internet.avatar' }}\",\n  \"phone_number\": \"+55 (48) 99168-0027\",\n  \"latitude\": \"{{faker 'location.latitude'}}\",\n  \"longitude\": \"{{faker 'location.longitude'}}\",\n  \"url\": \"{{ faker 'internet.url' }}\",\n  \"updatedAt\": \"{{ now }}\",\n  \"createdAt\": \"{{ now }}\"\n}",
+          "body": "{\n  \"id\": \"{{ faker 'string.uuid' }}\",\n  \"name\": \"{{ faker 'internet.displayName' }}\",\n  \"description\": \"{{ faker 'lorem.paragraph' }}\",\n  \"image_url\": \"{{ faker 'internet.avatar' }}\",\n  \"phone_number\": \"\",\n  \"latitude\": \"{{faker 'location.latitude'}}\",\n  \"longitude\": \"{{faker 'location.longitude'}}\",\n  \"url\": \"{{ faker 'internet.url' }}\",\n  \"updatedAt\": \"{{ now }}\",\n  \"createdAt\": \"{{ now }}\"\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
           "headers": [],
-          "bodyType": "INLINE",
+          "bodyType": "DATABUCKET",
           "filePath": "",
           "databucketID": "27fh",
           "sendFileAsBody": false,

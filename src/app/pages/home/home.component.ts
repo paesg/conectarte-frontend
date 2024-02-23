@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { CardComponent } from '../../components/card/card.component';
+import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { PrincipalCardComponent } from '../../components/principal-card/principal-card.component';
-import { GalleryComponent } from '../../components/gallery/gallery.component';
+import { ProductListComponent } from '../../features/product/features/product-list/product-list.component';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +13,7 @@ import { GalleryComponent } from '../../components/gallery/gallery.component';
     RouterModule,
     CardComponent,
     PrincipalCardComponent,
-    GalleryComponent,
+    ProductListComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

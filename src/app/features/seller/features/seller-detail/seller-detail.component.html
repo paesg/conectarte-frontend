@@ -1,1 +1,13 @@
-<app-user-card [seller]="seller"></app-user-card>
+<div class="row mb-5">
+  <app-user-card [seller]="seller"></app-user-card>
+</div>
+
+<div class="row">
+  <div class="col-12 text-center">
+    <h2>Produtos do artesão</h2>
+  </div>
+
+  <div class="col-12 mt-3">
+    <app-product-list [list]="sellerProducts"></app-product-list>
+  </div>
+</div>

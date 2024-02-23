@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { ProductItemComponent } from '../../components/product-item/product-item.component';
 import { Product } from '../../models/product.model';
@@ -13,23 +13,28 @@ import { ProductService } from '../../services/product.service';
   styleUrl: './product-list.component.scss',
 })
 export class ProductListComponent implements OnInit, OnDestroy {
-  productList: Product[] = [];
+  @Input()
+  list!: Product[];
 
   subject = new Subject<void>();
 
   constructor(private readonly productService: ProductService) {}
 
   ngOnInit(): void {
-    this.productService
-      .getProducts()
-      .pipe(takeUntil(this.subject))
-      .subscribe({
-        next: (list) => (this.productList = list),
-      });
+    if (!this.list) this.getProducts();
   }
 
   ngOnDestroy(): void {
     this.subject.next();
     this.subject.complete();
+  }
+
+  getProducts(): void {
+    this.productService
+      .getProducts()
+      .pipe(takeUntil(this.subject))
+      .subscribe({
+        next: (list) => (this.list = list),
+      });
   }
 }

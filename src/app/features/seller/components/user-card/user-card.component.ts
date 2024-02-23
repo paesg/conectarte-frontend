@@ -24,9 +24,10 @@ export class UserCardComponent {
 
   sanitizeSellerPhone(phoneNumber: string): string {
     return phoneNumber
-      .replace('+', '')
-      .replace(/\s/g, '')
-      .replace('-', '')
+      .replaceAll('+', '')
+      .replaceAll(' ', '')
+      .replaceAll('.', '')
+      .replaceAll('-', '')
       .replace(/[()]/g, '')
       .replace(/[A-Za-z]/g, '')
       .trim();

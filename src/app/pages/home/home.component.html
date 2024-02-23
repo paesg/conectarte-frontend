@@ -1,4 +1,132 @@
 <!-- <app-principal-card></app-principal-card> -->
 
-<h1>Produtos em Destaque</h1>
-<app-gallery></app-gallery>
+<div id="hero-section" class="p-5 mb-4 text-center">
+  <div id="overlay">&nbsp;</div>
+  <div id="image"><img src="assets/artesao.png" /></div>
+
+  <div id="hero-content" class="container-fluid py-5">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Seu espaço para negociar artesanato</h1>
+
+      <p class="col-12 fs-4 text-center">
+        Using a series of utilities, you can create this jumbotron, just like
+        the one in previous versions of Bootstrap. Check out the examples below
+        for how you can remix and restyle it to your liking.
+      </p>
+
+      <button
+        class="btn btn-primary btn-lg mt-5"
+        type="button"
+        routerLink="/store"
+      >
+        Ver produtos <i class="fa-solid fa-angle-right"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h1>Produtos em Destaque</h1>
+
+  <app-product-list
+    [list]="[
+      {
+        id: 'ff7befec-f0f1-4ee2-a983-f67d032c4d30',
+        name: 'Bespoke Soft Table',
+        description:
+          'The slim &amp; simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality',
+        price: 415,
+        image_url: 'https://loremflickr.com/800/800/handmade?random=140',
+        updatedAt: '2024-02-22T23:01:07.649-03:00',
+        createdAt: '2024-02-22T23:01:07.649-03:00',
+        seller: {
+          id: '799728a4-9c5f-4352-b83a-5ecad59c4a14',
+          name: 'Dock_Labadie',
+          description:
+            'Culpo voveo tamisium creber. Tener summisse curia. Aegrotatio eaque defendo admoneo vos mollitia aestivus urbs stella spero.',
+          image_url:
+            'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/717.jpg',
+          phone_number: '1-828-648-3377 x775',
+          latitude: '25.2086',
+          longitude: '-146.5883',
+          url: 'https://fickle-incision.com/',
+          updatedAt: '2024-02-22T23:01:07.649-03:00',
+          createdAt: '2024-02-22T23:01:07.649-03:00'
+        }
+      },
+      {
+        id: '4316f0e4-4ab3-436c-88b6-5d766d47d5b2',
+        name: 'Sleek Rubber Car',
+        description:
+          'New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A &amp; J 2016',
+        price: 562,
+        image_url: 'https://loremflickr.com/800/800/handmade?random=125',
+        updatedAt: '2024-02-22T23:01:07.649-03:00',
+        createdAt: '2024-02-22T23:01:07.649-03:00',
+        seller: {
+          id: 'f549c6f3-99cb-4501-895c-356eca828314',
+          name: 'Wayne86',
+          description:
+            'Terra adsidue thesaurus dignissimos ascit. Ambulo sopor bene nobis adipiscor adduco. Truculenter facilis capillus umquam adulescens aptus admoveo adfero.',
+          image_url:
+            'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/325.jpg',
+          phone_number: '550.652.9653 x66044',
+          latitude: '-56.8439',
+          longitude: '-156.5026',
+          url: 'https://ideal-drain.name',
+          updatedAt: '2024-02-22T23:01:07.649-03:00',
+          createdAt: '2024-02-22T23:01:07.649-03:00'
+        }
+      },
+
+      {
+        id: '2aeae6a1-97ec-4d28-936e-ba9b64bc3b91',
+        name: 'Elegant Concrete Cheese',
+        description:
+          'Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes &amp; sandals',
+        price: 646,
+        image_url: 'https://loremflickr.com/800/800/handmade?random=57',
+        updatedAt: '2024-02-22T23:01:07.651-03:00',
+        createdAt: '2024-02-22T23:01:07.651-03:00',
+        seller: {
+          id: '8cf0d8e2-6dfc-4657-9bde-404cb62461e2',
+          name: 'Olin_Walsh',
+          description:
+            'Suppono adiuvo rerum. Crustulum trado terror. Confero suggero esse adhaero dens taceo.',
+          image_url:
+            'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/268.jpg',
+          phone_number: '1-344-210-4630 x78682',
+          latitude: '-66.4491',
+          longitude: '145.7003',
+          url: 'https://marvelous-microphone.name',
+          updatedAt: '2024-02-22T23:01:07.651-03:00',
+          createdAt: '2024-02-22T23:01:07.651-03:00'
+        }
+      },
+      {
+        id: '2aeae6a1-97ec-4d28-936e-ba9b64bc3b91',
+        name: 'Elegant Concrete Cheese',
+        description:
+          'Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes &amp; sandals',
+        price: 646,
+        image_url: 'https://loremflickr.com/800/800/handmade?random=57',
+        updatedAt: '2024-02-22T23:01:07.651-03:00',
+        createdAt: '2024-02-22T23:01:07.651-03:00',
+        seller: {
+          id: '8cf0d8e2-6dfc-4657-9bde-404cb62461e2',
+          name: 'Olin_Walsh',
+          description:
+            'Suppono adiuvo rerum. Crustulum trado terror. Confero suggero esse adhaero dens taceo.',
+          image_url:
+            'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/268.jpg',
+          phone_number: '1-344-210-4630 x78682',
+          latitude: '-66.4491',
+          longitude: '145.7003',
+          url: 'https://marvelous-microphone.name',
+          updatedAt: '2024-02-22T23:01:07.651-03:00',
+          createdAt: '2024-02-22T23:01:07.651-03:00'
+        }
+      }
+    ]"
+  ></app-product-list>
+</div>
