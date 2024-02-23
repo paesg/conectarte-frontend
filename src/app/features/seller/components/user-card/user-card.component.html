@@ -6,15 +6,15 @@
           <div class="d-flex text-black">
             <div class="flex-shrink-0">
               <img
-                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
-                alt="Generic placeholder image"
+                [src]="seller.image_url"
+                alt="Image from seller: {{ seller.name }}"
                 class="img-fluid"
                 style="width: 180px; border-radius: 10px"
               />
             </div>
 
             <div class="flex-grow-1 ms-3">
-              <h5 class="mb-1">Danny McLoan</h5>
+              <h5 class="mb-1">{{ seller.name }}</h5>
               <p class="mb-2 pb-1">Artesão</p>
 
               <!-- <div
@@ -39,18 +39,21 @@
 
               <p>
                 <i class="fa fa-link">&nbsp;</i>
-                <a href="#">linktree.com/danny-mcloan</a>
+                <a [href]="seller.url" target="_blank">Visitar site</a>
               </p>
 
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                sed libero mattis, ornare nisl vel, egestas justo.
+              <p *ngIf="seller.description">
+                {{ seller.description }}
               </p>
 
               <p class="text-secondary">Cadastrado há 2 anos</p>
 
               <div class="d-flex pt-1">
-                <button type="button" class="btn flex-grow-1">
+                <button
+                  type="button"
+                  class="btn flex-grow-1"
+                  (click)="contactSeller(seller)"
+                >
                   <i class="fa-brands fa-whatsapp"></i> Entrar em contato
                 </button>
               </div>
