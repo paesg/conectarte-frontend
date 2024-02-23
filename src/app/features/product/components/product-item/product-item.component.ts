@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Product } from '../../models/product.model';
 import { CurrencyPipe, DatePipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { NG_VALIDATORS, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-product-item',

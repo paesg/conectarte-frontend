@@ -64,7 +64,7 @@
       "responses": [
         {
           "uuid": "d264c84e-07bf-441a-afa7-ac8ca911001b",
-          "body": "[\n  {{#repeat 6}}\n  {\n    \"id\": {{ faker 'string.uuid' }},\n    \"nome\": {{ faker 'commerce.productName' }},\n    \"artista_id\": {{ faker 'string.uuid' }},\n    \"descrição\": {{ faker 'commerce.productDescription' }},\n    \"preço\":  {{ faker 'commerce.price' }},\n    \"img\": \"https: //cdn.pixabay.com/photo/2023/09/23/04/15/ai-generated-8270217_1280.jpg\"\n  }\n  {{/repeat}}\n]",
+          "body": "",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -78,6 +78,101 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "a73f0e82-4197-427c-98bc-992547e28001",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "iamd",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "d94985d3-8112-4827-90ce-886eec3bf98c",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "iamd",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "fa3dbdba-37e4-4901-a8cb-e29e57b64b29",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "d0497ecd-0fa3-457f-b261-a4326512cb3c",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "iamd",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "a30cdb6e-7c2d-461b-aa44-66c45a845e38",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "iamd",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
@@ -98,7 +193,7 @@
           "statusCode": 200,
           "label": "",
           "headers": [],
-          "bodyType": "INLINE",
+          "bodyType": "DATABUCKET",
           "filePath": "",
           "databucketID": "iamd",
           "sendFileAsBody": false,
@@ -127,7 +222,7 @@
           "statusCode": 200,
           "label": "",
           "headers": [],
-          "bodyType": "INLINE",
+          "bodyType": "DATABUCKET",
           "filePath": "",
           "databucketID": "iamd",
           "sendFileAsBody": false,
@@ -156,7 +251,7 @@
           "statusCode": 200,
           "label": "",
           "headers": [],
-          "bodyType": "INLINE",
+          "bodyType": "DATABUCKET",
           "filePath": "",
           "databucketID": "0pgy",
           "sendFileAsBody": false,
@@ -302,6 +397,10 @@
     {
       "key": "Access-Control-Allow-Headers",
       "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    },
+    {
+      "key": "Cache-Control",
+      "value": "no-cache"
     }
   ],
   "proxyReqHeaders": [
@@ -322,7 +421,14 @@
       "id": "iamd",
       "name": "Product list",
       "documentation": "",
-      "value": "[\n  {{#repeat 6}}\n  {\n    \"id\": \"{{ faker 'string.uuid' }}\",\n    \"name\": \"{{ faker 'commerce.productName' }}\",\n    \"description\": \"{{ faker 'commerce.productDescription' }}\",\n    \"price\":  {{ faker 'commerce.price' }},\n    \"image_url\": \"https://cdn.pixabay.com/photo/2023/09/23/04/15/ai-generated-8270217_1280.jpg\",\n    \"updatedAt\": \"{{ now }}\",\n    \"createdAt\": \"{{ now }}\",\n    \"seller\": {\n      \"id\": \"{{ faker 'string.uuid' }}\",\n      \"name\": \"{{ faker 'internet.displayName' }}\",\n      \"description\": \"{{ faker 'lorem.paragraph' }}\",\n      \"image_url\": \"{{ faker 'internet.avatar' }}\",\n      \"phone_number\": \"{{ faker 'phone.number' }}\",\n      \"latitude\": \"{{faker 'location.latitude'}}\",\n      \"longitude\": \"{{faker 'location.longitude'}}\",\n      \"url\": \"{{ faker 'internet.url' }}\",\n      \"updatedAt\": \"{{ now }}\",\n      \"createdAt\": \"{{ now }}\"\n    }\n  }\n  {{/repeat}}\n]"
+      "value": "[\n  {{#repeat 12}}\n  { \n    \"id\": \"{{ faker 'string.uuid' }}\",\n    \"name\": \"{{ faker 'commerce.productName' }}\",\n    \"description\": \"{{ faker 'commerce.productDescription' }}\",\n    \"price\":  {{ faker 'commerce.price' }},\n    \"image_url\": \"https://loremflickr.com/800/800/handmade?random={{ faker 'number.int' 200}}\",\n    \"updatedAt\": \"{{ now }}\",\n    \"createdAt\": \"{{ now }}\",\n    \"seller\": {\n      \"id\": \"{{ faker 'string.uuid' }}\",\n      \"name\": \"{{ faker 'internet.displayName' }}\",\n      \"description\": \"{{ faker 'lorem.paragraph' }}\",\n      \"image_url\": \"{{ faker 'internet.avatar' }}\",\n      \"phone_number\": \"{{ faker 'phone.number' }}\",\n      \"latitude\": \"{{faker 'location.latitude'}}\",\n      \"longitude\": \"{{faker 'location.longitude'}}\",\n      \"url\": \"{{ faker 'internet.url' }}\",\n      \"updatedAt\": \"{{ now }}\",\n      \"createdAt\": \"{{ now }}\"\n    }\n  }\n  {{/repeat}}\n]"
+    },
+    {
+      "uuid": "5e1cfe8c-4ac2-4a04-82c9-d2aad5ad0ccf",
+      "id": "sz0a",
+      "name": "Product list (copy)",
+      "documentation": "",
+      "value": "[\n  {{#repeat 6 12}}\n  { \n    \"id\": \"{{ faker 'string.uuid' }}\",\n    \"name\": \"{{ faker 'commerce.productName' }}\",\n    \"description\": \"{{ faker 'commerce.productDescription' }}\",\n    \"price\":  {{ faker 'commerce.price' }},\n    \"image_url\": \"https://loremflickr.com/800/800/handmade/\",\n    \"updatedAt\": \"{{ now }}\",\n    \"createdAt\": \"{{ now }}\",\n    \"seller\": {\n      \"id\": \"{{ faker 'string.uuid' }}\",\n      \"name\": \"{{ faker 'internet.displayName' }}\",\n      \"description\": \"{{ faker 'lorem.paragraph' }}\",\n      \"image_url\": \"{{ faker 'internet.avatar' }}\",\n      \"phone_number\": \"{{ faker 'phone.number' }}\",\n      \"latitude\": \"{{faker 'location.latitude'}}\",\n      \"longitude\": \"{{faker 'location.longitude'}}\",\n      \"url\": \"{{ faker 'internet.url' }}\",\n      \"updatedAt\": \"{{ now }}\",\n      \"createdAt\": \"{{ now }}\"\n    }\n  }\n  {{/repeat}}\n]"
     },
     {
       "uuid": "7300b3d9-9a12-421f-a652-6d5678403434",
@@ -343,14 +449,14 @@
       "id": "olbh",
       "name": "Category list",
       "documentation": "",
-      "value": "[\n  {{#repeat 6}}\n  {\n  \"id\": {{ faker 'string.uuid' }},\n  \"name\": {{ faker 'company.bsBuzz' }},\n  \"description\": {{ faker 'lorem.paragraph' }}\n  }\n  {{/repeat}}\n]"
+      "value": "[\n  {{#repeat 6}}\n  {\n  \"id\": \"{{ faker 'string.uuid' }}\",\n  \"name\": \"{{ faker 'company.bsBuzz' }}\",\n  \"description\": \"{{ faker 'lorem.paragraph' }}\"\n  }\n  {{/repeat}}\n]"
     },
     {
       "uuid": "b2658f2a-d6f2-48f2-9010-d3c9a6e09f0d",
       "id": "iduv",
       "name": "Category data",
       "documentation": "",
-      "value": "{\n  \"id\": {{ faker 'string.uuid' }},\n  \"name\": {{ faker 'company.bsBuzz' }},\n  \"description\": {{ faker 'lorem.paragraph' }}\n}\n"
+      "value": "{\n  \"id\": \"{{ faker 'string.uuid' }}\",\n  \"name\":\" {{ faker 'company.bsBuzz' }}\",\n  \"description\": \"{{ faker 'lorem.paragraph' }}\"\n}\n"
     }
   ],
   "callbacks": []
