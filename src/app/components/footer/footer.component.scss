@@ -1,0 +1,38 @@
+.principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 11em;
+
+}
+
+#icons-center {
+    font-size: 2.25rem;
+
+    .item {
+        cursor: pointer;
+
+        i:hover {
+            color: var(--cor-primaria)
+        }
+    }
+}
+
+.fa-transparent {
+    background-color: transparent !important;
+    color: var(--cor-primaria);
+}
+
+.fa-transparent:before {
+    background-color: transparent !important;
+}
+
+.principal .fa-transparent {
+    background-color: transparent !important;
+    color: var(--cor-primaria);
+}
+
+.principal .fa-transparent:before {
+    background-color: transparent !important;
+}
