@@ -6,16 +6,4 @@
     // border: 0.125rem solid var(--cor-primaria);
     border-radius: 0.625rem;
   }
-
-  .btn {
-    background: var(--cor-primaria);
-    border-radius: 0.625rem;
-    color: #fff;
-    transition: background-color 0.4s ease;
-
-    &:hover {
-      background-color: var(--cor-secundaria);
-      color: var(--cor-primaria);
-    }
-  }
 }

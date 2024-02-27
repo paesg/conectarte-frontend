@@ -1,0 +1,15 @@
+:host {
+  width: 100%;
+}
+
+.btn {
+  background: var(--cor-primaria);
+  border-radius: 0.625rem;
+  color: #fff;
+  transition: background-color 0.4s ease;
+
+  &:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+  }
+}

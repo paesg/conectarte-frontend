@@ -18,45 +18,21 @@
             <h5 class="mb-1">{{ seller.name }}</h5>
             <p class="mb-2 pb-1">Artesão</p>
 
-            <!-- <div
-                class="d-flex justify-content-start rounded-3 p-2 mb-2"
-                style="background-color: #efefef"
-              >
-                <div>
-                  <p class="small text-muted mb-1">Produtos</p>
-                  <p class="mb-0">41</p>
-                </div>
-
-                <div class="px-3">
-                  <p class="small text-muted mb-1">Seguidores</p>
-                  <p class="mb-0">976</p>
-                </div>
-
-                <div>
-                  <p class="small text-muted mb-1">Avaliação</p>
-                  <p class="mb-0">8.5</p>
-                </div>
-              </div> -->
-
             <p>
               <i class="fa fa-link">&nbsp;</i>
               <a [href]="seller.url" target="_blank">Visitar site</a>
             </p>
 
-            <p *ngIf="seller.description">
+            <p *ngIf="showDescription && seller.description">
               {{ seller.description }}
             </p>
 
             <p class="text-secondary">Cadastrado há 2 anos</p>
 
             <div class="d-flex pt-1">
-              <button
-                type="button"
-                class="btn flex-grow-1"
-                (click)="contactSeller(seller)"
-              >
-                <i class="fa-brands fa-whatsapp"></i> Entrar em contato
-              </button>
+              <app-contact-button
+                [phone]="seller.phone_number"
+              ></app-contact-button>
             </div>
           </div>
         </div>

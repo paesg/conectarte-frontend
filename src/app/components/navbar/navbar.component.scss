@@ -33,6 +33,23 @@ nav {
       }
     }
 
+    .dropdown{
+
+      .btn {
+        color: var(--cor-primaria);
+      }
+
+      .dropdown-menu {
+        background-color: var(--cor-secundaria);
+        color: var(--cor-primaria);
+      }
+
+      .dropdown-item {
+        color: var(--cor-primaria);
+      }
+    }
+
+
     .navbar-collapse {
       // When navbar is in mobile mode
       &.show {

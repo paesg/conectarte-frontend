@@ -247,7 +247,7 @@
         {
           "uuid": "7956e0ad-478b-458f-93b0-37d1bf7514d1",
           "body": "{\n  \"id\": {{ faker 'string.uuid' }},\n  \"nome\": {{ faker 'commerce.productName' }},\n  \"artista_id\": {{ faker 'string.uuid' }},\n  \"descrição\": {{ faker 'commerce.productDescription' }},\n  \"preço\":  {{ faker 'commerce.price' }},\n  \"img\": \"https: //cdn.pixabay.com/photo/2023/09/23/04/15/ai-generated-8270217_1280.jpg\",\n  \"phone_number\": {{ faker 'phone.number' }},\n  \"latitude\": {{faker 'location.latitude'}},\n  \"longitude\": {{faker 'location.longitude'}}\n}",
-          "latency": 0,
+          "latency": 500,
           "statusCode": 200,
           "label": "",
           "headers": [],
@@ -264,7 +264,7 @@
           "callbacks": []
         }
       ],
-      "responseMode": null
+      "responseMode": "RANDOM"
     },
     {
       "uuid": "831ac39a-577e-4348-8938-a5db609b5e54",
@@ -435,7 +435,7 @@
       "id": "0pgy",
       "name": "Product data",
       "documentation": "Detalhes de um produto",
-      "value": "{\n  \"id\": \"{{ faker 'string.uuid' }}\",\n  \"name\": \"{{ faker 'commerce.productName' }}\",\n  \"description\": \"{{ faker 'commerce.productDescription' }}\",\n  \"price\":  {{ faker 'commerce.price' }},\n  \"image_url\": \"https://cdn.pixabay.com/photo/2023/09/23/04/15/ai-generated-8270217_1280.jpg\",\n  \"updatedAt\": \"{{ now }}\",\n  \"createdAt\": \"{{ now }}\",\n  \"seller\": {\n    \"id\": \"{{ faker 'string.uuid' }}\",\n    \"name\": \"{{ faker 'internet.displayName' }}\",\n    \"description\": \"{{ faker 'lorem.paragraph' }}\",\n    \"image_url\": \"{{ faker 'internet.avatar' }}\",\n    \"phone_number\": \"{{ faker 'phone.number' }}\",\n    \"latitude\": \"{{faker 'location.latitude'}}\",\n    \"longitude\": \"{{faker 'location.longitude'}}\",\n    \"url\": \"{{ faker 'internet.url' }}\",\n    \"updatedAt\": \"{{ now }}\",\n    \"createdAt\": \"{{ now }}\"\n  }\n}"
+      "value": "{\n  \"id\": \"{{ faker 'string.uuid' }}\",\n  \"name\": \"{{ faker 'commerce.productName' }}\",\n  \"description\": \"{{ faker 'lorem.sentences' 50 }}\",\n  \"price\":  {{ faker 'commerce.price' }},\n  \"image_url\": \"https://loremflickr.com/800/800/handmade/\",\n  \"updatedAt\": \"{{ now }}\",\n  \"createdAt\": \"{{ now }}\",\n  \"seller\": {\n    \"id\": \"{{ faker 'string.uuid' }}\",\n    \"name\": \"{{ faker 'internet.displayName' }}\",\n    \"description\": \"{{ faker 'lorem.paragraph' }}\",\n    \"image_url\": \"{{ faker 'internet.avatar' }}\",\n    \"phone_number\": \"{{ faker 'phone.number' }}\",\n    \"latitude\": \"{{faker 'location.latitude'}}\",\n    \"longitude\": \"{{faker 'location.longitude'}}\",\n    \"url\": \"{{ faker 'internet.url' }}\",\n    \"updatedAt\": \"{{ now }}\",\n    \"createdAt\": \"{{ now }}\"\n  }\n}"
     },
     {
       "uuid": "e78eed69-0528-409e-aa3a-1a556724e533",

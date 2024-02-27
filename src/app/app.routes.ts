@@ -1,8 +1,5 @@
 import { Routes } from '@angular/router';
-import { AboutComponent } from './pages/about/about.component';
-import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
-import { StoreComponent } from './pages/store/store.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -11,14 +8,18 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/store/store.component').then((c) => c.StoreComponent),
   },
-
-  // TODO:
   {
     path: 'seller/:id',
     loadComponent: () =>
       import('./pages/seller/seller.component').then((c) => c.SellerComponent),
   },
-  { path: 'product/:id', loadComponent: () => StoreComponent },
+  {
+    path: 'product/:id',
+    loadComponent: () =>
+      import(
+        './pages/store/pages/product-detail/product-detail-page.component'
+      ).then((c) => c.ProductDetailPageComponent),
+  },
 
   {
     path: 'about-us',

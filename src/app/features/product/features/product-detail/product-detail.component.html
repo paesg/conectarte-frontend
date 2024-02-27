@@ -1,0 +1,71 @@
+<ng-container *ngIf="product; else loading">
+  <div class="row">
+    <div class="col-sm-12 col-md-4" id="photo">
+      <img class="w-100" [src]="product.image_url" />
+    </div>
+
+    <div class="col-sm-12 col-md-8" id="detail">
+      <h1>{{ product.name }}</h1>
+
+      <hr />
+
+      <h2 id="price" class="mt-4 fs-1 fw-medium">
+        {{ product.price | currency : "BRL" }}
+      </h2>
+
+      <div id="seller" class="mt-2">
+        Anunciado por
+        <b [routerLink]="['/seller', product.seller.id]" id="seller-name">{{
+          product.seller.name
+        }}</b>
+      </div>
+
+      <div class="mt-5">
+        <p class="fw-light">
+          Gostou deste anúncio? Entre em contato com o vendedor.
+        </p>
+
+        <app-contact-button
+          [phone]="product.seller.phone_number"
+          message="Olá, gostei do anúncio {{ product.name }} de código {{
+            product.id
+          }}"
+          buttonLabel="Falar com o vendedor"
+        ></app-contact-button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">Detalhes do produto</div>
+
+        <div class="card-body" [innerHTML]="product.description"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">Vendido e anunciado por</div>
+
+        <div class="card-body">
+          <app-user-card
+            [seller]="product.seller"
+            [showDescription]="false"
+          ></app-user-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #loading>
+  <div class="col-12 text-center">
+    <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+
+    Carregando dados do produto...
+  </div>
+</ng-template>
